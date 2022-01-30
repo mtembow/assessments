@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20220130 11:45:55.443" rpa="false">
+<suite id="s1" name="TC1" source="C:\Projects\RobotWebAutomation\TestCases\TC1.robot">
+<kw name="Fail If Suite Has Duplicate Test Names" library="DuplicateListener" type="setup">
+<status status="PASS" starttime="20220130 11:45:55.607" endtime="20220130 11:45:55.607"></status>
+</kw>
+<test id="s1-t1" name="Navigate">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20220130 11:45:55.609" level="INFO">Opening browser 'chrome' to base url 'http://www.way2automation.com/angularjs-protractor/webtables/'.</msg>
+<status status="PASS" starttime="20220130 11:45:55.608" endtime="20220130 11:46:00.302"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220130 11:46:00.302" endtime="20220130 11:46:00.425"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Protractor practice website - WebTables</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.437" level="INFO">Page title is 'Protractor practice website - WebTables'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.426" endtime="20220130 11:46:00.438"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20220130 11:46:00.439" endtime="20220130 11:46:00.441"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class="btn btn-link pull-right" and @type="add"]</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.443" level="INFO">Clicking button 'xpath://*[@class="btn btn-link pull-right" and @type="add"]'.</msg>
+<msg timestamp="20220130 11:46:00.557" level="INFO">c:\users\user\appdata\local\programs\python\python39\lib\site-packages\selenium\webdriver\remote\webdriver.py:470: UserWarning: find_elements_by_* commands are deprecated. Please use find_elements() instead
+  warnings.warn("find_elements_by_* commands are deprecated. Please use find_elements() instead")</msg>
+<status status="PASS" starttime="20220130 11:46:00.442" endtime="20220130 11:46:00.558"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="FirstName"]</arg>
+<arg>${FirstName}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.559" level="INFO">Typing text 'Baba' into text field 'xpath://*[@name="FirstName"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.559" endtime="20220130 11:46:00.665"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="LastName"]</arg>
+<arg>${LastName}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.666" level="INFO">Typing text 'Baba' into text field 'xpath://*[@name="LastName"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.666" endtime="20220130 11:46:00.766"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="UserName"]</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.766" level="INFO">Typing text 'Baba' into text field 'xpath://*[@name="UserName"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.766" endtime="20220130 11:46:00.861"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="Password"]</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.862" level="INFO">Typing text 'Baba' into text field 'xpath://*[@name="Password"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.862" endtime="20220130 11:46:00.954"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>optionsRadios</arg>
+<arg>${Customer}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:00.957" level="INFO">Selecting '16' from radio button 'optionsRadios'.</msg>
+<status status="PASS" starttime="20220130 11:46:00.956" endtime="20220130 11:46:01.019"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>RoleId</arg>
+<arg>${Role}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:01.021" level="INFO">Selecting options from selection list 'RoleId' by label Customer.</msg>
+<status status="PASS" starttime="20220130 11:46:01.021" endtime="20220130 11:46:01.094"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="Email"]</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:01.096" level="INFO">Typing text 'Baba@gmail.com' into text field 'xpath://*[@name="Email"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:01.095" endtime="20220130 11:46:01.197"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@name="Mobilephone"]</arg>
+<arg>${CellPhone}</arg>
+</arguments>
+<msg timestamp="20220130 11:46:01.198" level="INFO">Typing text '0112233445' into text field 'xpath://*[@name="Mobilephone"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:01.198" endtime="20220130 11:46:01.275"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class="btn btn-success"]</arg>
+</arguments>
+<msg timestamp="20220130 11:46:01.275" level="INFO">Clicking button 'xpath://*[@class="btn btn-success"]'.</msg>
+<status status="PASS" starttime="20220130 11:46:01.275" endtime="20220130 11:46:01.332"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20220130 11:46:11.335" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220130 11:46:01.333" endtime="20220130 11:46:11.335"></status>
+</kw>
+<status status="PASS" starttime="20220130 11:45:55.607" endtime="20220130 11:46:11.336" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220130 11:46:11.340" endtime="20220130 11:46:13.528"></status>
+</kw>
+<status status="PASS" starttime="20220130 11:45:55.445" endtime="20220130 11:46:13.528"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20220130 07:33:30.382" rpa="false">
+<suite id="s1" name="TC1 Get All Breeds" source="C:\Projects\RobotAPIAutomation\TestCases\TC1_Get_All_Breeds.robot">
+<test id="s1-t1" name="TC_001_Get_All_Dog_Breeds">
+<kw name="Start the session" library="Resource">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>myssion</arg>
+<arg>${base_url}</arg>
+</arguments>
+<msg timestamp="20220130 07:33:30.937" level="INFO">Creating Session using : alias=myssion, url=https://dog.ceo/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220130 07:33:30.937" endtime="20220130 07:33:30.937"></status>
+</kw>
+<status status="PASS" starttime="20220130 07:33:30.937" endtime="20220130 07:33:30.938"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>myssion</arg>
+<arg>${dog-api}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20220130 07:33:31.411" level="INFO">GET Request : url=https://dog.ceo/api/breeds/list/all 
+ path_url=/api/breeds/list/all 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220130 07:33:31.411" level="INFO">GET Response : url=https://dog.ceo/api/breeds/list/all 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 30 Jan 2022 05:33:31 GMT', 'Content-Type': 'application/json', 'Content-Length': '937', 'Connection': 'keep-alive', 'x-powered-by': 'PHP/7.3.31', 'access-control-allow-origin': '*', 'content-encoding': 'gzip', 'via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'cache-control': 'max-age=1800', 'x-cache-age': '6496', 'x-cache-hits': '1595', 'x-cache': 'HIT', 'accept-ranges': 'bytes', 'age': '0', 'vary': 'Accept-Encoding', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=yL7atn5B2Nb9Zyt3wTdqi0tEG2D4nUcQpqEk9zk6MFQJvElcY%2F92qkQPzSHzEJIexNZ5W4w2mqBekCvugh%2Bi%2F5dGZKQ%2FvL3llBO6yW3JIhSxBF3gXE41%2FEow"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6d58536d29bd052a-JNB', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body={"message":{"affenpinscher":[],"african":[],"airedale":[],"akita":[],"appenzeller":[],"australian":["shepherd"],"basenji":[],"beagle":[],"bluetick":[],"borzoi":[],"bouvier":[],"boxer":[],"brabancon":[],"briard":[],"buhund":["norwegian"],"bulldog":["boston","english","french"],"bullterrier":["staffordshire"],"cattledog":["australian"],"chihuahua":[],"chow":[],"clumber":[],"cockapoo":[],"collie":["border"],"coonhound":[],"corgi":["cardigan"],"cotondetulear":[],"dachshund":[],"dalmatian":[],"dane":["great"],"deerhound":["scottish"],"dhole":[],"dingo":[],"doberman":[],"elkhound":["norwegian"],"entlebucher":[],"eskimo":[],"finnish":["lapphund"],"frise":["bichon"],"germanshepherd":[],"greyhound":["italian"],"groenendael":[],"havanese":[],"hound":["afghan","basset","blood","english","ibizan","plott","walker"],"husky":[],"keeshond":[],"kelpie":[],"komondor":[],"kuvasz":[],"labradoodle":[],"labrador":[],"leonberg":[],"lhasa":[],"malamute":[],"malinois":[],"maltese":[],"mastiff":["bull","english","tibetan"],"mexicanhairless":[],"mix":[],"mountain":["bernese","swiss"],"newfoundland":[],"otterhound":[],"ovcharka":["caucasian"],"papillon":[],"pekinese":[],"pembroke":[],"pinscher":["miniature"],"pitbull":[],"pointer":["german","germanlonghair"],"pomeranian":[],"poodle":["miniature","standard","toy"],"pug":[],"puggle":[],"pyrenees":[],"redbone":[],"retriever":["chesapeake","curly","flatcoated","golden"],"ridgeback":["rhodesian"],"rottweiler":[],"saluki":[],"samoyed":[],"schipperke":[],"schnauzer":["giant","miniature"],"setter":["english","gordon","irish"],"sheepdog":["english","shetland"],"shiba":[],"shihtzu":[],"spaniel":["blenheim","brittany","cocker","irish","japanese","sussex","welsh"],"springer":["english"],"stbernard":[],"terrier":["american","australian","bedlington","border","cairn","dandie","fox","irish","kerryblue","lakeland","norfolk","norwich","patterdale","russell","scottish","sealyham","silky","tibetan","toy","welsh","westhighland","wheaten","yorkshire"],"tervuren":[],"vizsla":[],"waterdog":["spanish"],"weimaraner":[],"whippet":[],"wolfhound":["irish"]},"status":"success"} 
+ </msg>
+<msg timestamp="20220130 07:33:31.412" level="INFO">c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dog.ceo'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220130 07:33:31.413" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220130 07:33:30.938" endtime="20220130 07:33:31.413"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20220130 07:33:31.414" endtime="20220130 07:33:31.415"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20220130 07:33:31.416" endtime="20220130 07:33:31.417"></status>
+</kw>
+<status status="PASS" starttime="20220130 07:33:30.936" endtime="20220130 07:33:31.419" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220130 07:33:30.384" endtime="20220130 07:33:31.421"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TC1 Get All Breeds">TC1 Get All Breeds</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
